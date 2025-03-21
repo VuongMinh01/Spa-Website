@@ -1,0 +1,88 @@
+.footer-container {
+    background: #E6F7F7;
+    /* Xanh nhạt nhẹ nhàng */
+    padding: 20px 0;
+    color: #2C3E50;
+    /* Xanh đậm, dễ đọc */
+    font-size: 14px;
+}
+
+.footer-logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #16A085;
+    /* Xanh thiên nhiên */
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #2C3E50;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #16A085;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer-contact p svg {
+    margin-right: 8px;
+    color: #16A085;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    background: #D1F2EB;
+    /* Xanh nhạt dịu nhẹ */
+    font-size: 12px;
+}
+
+.social-icons a {
+    margin: 0 8px;
+    font-size: 18px;
+    color: #16A085;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive cho điện thoại */
+@media (max-width: 768px) {
+    .footer-container {
+        text-align: center;
+    }
+
+    .footer-contact p {
+        justify-content: center;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+}
+
+footer {
+    width: 100vw;
+    background: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .ant-layout-footer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}

@@ -1,0 +1,77 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s, padding 0.3s;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background-color: #b3e5fc;
+    /* Xanh nhạt khi kéo xuống */
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    /* Màu trắng khi chưa cuộn */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar.scrolled .logo a {
+    color: #0277bd;
+    /* Xanh đậm khi cuộn xuống */
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    background: transparent !important;
+    border-bottom: none;
+}
+
+.nav-menu .ant-menu-item a {
+    color: black;
+    /* Màu chữ trắng khi chưa cuộn */
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar.scrolled .nav-menu .ant-menu-item a {
+    color: #01579b;
+    /* Xanh đậm khi cuộn xuống */
+}
+
+.nav-menu .ant-menu-item:hover {
+    color: #a0e7e5 !important;
+    /* Màu xanh nhạt khi hover */
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* Hiển thị menu button trên điện thoại */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+        color: #fff;
+    }
+
+    .navbar.scrolled .menu-btn {
+        color: #0277bd;
+    }
+}
