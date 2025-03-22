@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Footer from '../../components/Footer';
-import '../../css/HomePage.css';
+import Home from '../../components/HomeComponents/Home';
+import HomeAboutUs from '../../components/HomeComponents/HomeAboutUs';
 
 export default function HomePage() {
     useEffect(() => {
@@ -9,15 +10,9 @@ export default function HomePage() {
     }, []);
 
     return (
-        <div className="homepage">
-            {/* Hero Section */}
-            <div className="hero">
-                <div className="hero-text">
-                    <h1>Thư Giãn & Trẻ Hóa</h1>
-                    <p>Trải nghiệm dịch vụ spa tốt nhất dành cho bạn</p>
-                </div>
-            </div>
-
+        <div>
+            <Home />
+            <HomeAboutUs />
             <Footer />
         </div>
     );
