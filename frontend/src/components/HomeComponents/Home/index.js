@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import "../../../css/Home.css";
 
@@ -18,7 +19,7 @@ export default function Home() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 4000); // Tự động chuyển ảnh sau 4s
+        }, 10000); // Tự động chuyển ảnh sau 4s
         return () => clearInterval(interval);
     }, []);
 

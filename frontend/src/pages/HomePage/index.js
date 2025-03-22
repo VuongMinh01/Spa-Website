@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import Footer from '../../components/Footer';
 import Home from '../../components/HomeComponents/Home';
 import HomeAboutUs from '../../components/HomeComponents/HomeAboutUs';
-
 export default function HomePage() {
     useEffect(() => {
         document.title = 'Spa';

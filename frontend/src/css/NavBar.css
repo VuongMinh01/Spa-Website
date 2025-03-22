@@ -7,69 +7,74 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background-color 0.3s, padding 0.3s;
+    transition: background-color 0.3s, padding 0.3s, border-bottom 0.3s;
     z-index: 1000;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    /* Thanh mờ khi chưa cuộn */
 }
 
 .navbar.scrolled {
-    background-color: #b3e5fc;
-    /* Xanh nhạt khi kéo xuống */
+    background-color: white !important;
+    /* Khi cuộn thì nền trắng */
     padding: 10px 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    /* Thanh ngang mờ 1px */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    /* Để chắc chắn */
 }
 
-.logo {
-    margin-left: 20px;
-    /* Lùi vào một chút */
-}
-
+/* Logo */
 .logo a {
-    font-size: 24px;
+    font-size: 26px;
+    /* Chữ to hơn */
     font-weight: bold;
-    color: #fff;
+    /* Chữ đậm */
+    color: white !important;
+    /* Chữ trắng khi chưa cuộn */
     text-decoration: none;
     transition: color 0.3s;
 }
 
-
-
 .navbar.scrolled .logo a {
-    color: black;
-    /* Xanh đậm khi cuộn xuống */
+    color: black !important;
+    /* Chữ đen khi cuộn */
 }
 
+/* Menu */
 .nav-menu {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     background: transparent !important;
     border-bottom: none;
 }
 
 .nav-menu .ant-menu-item a {
     font-weight: bold;
-    /* Chữ đậm hơn */
+    /* Chữ đậm */
     font-size: 18px;
     /* Chữ to hơn */
-    color: white;
-    /* Màu trắng khi chưa cuộn */
+    color: white !important;
+    /* Chữ trắng khi chưa cuộn */
     transition: color 0.3s;
 }
 
-/* Khi cuộn xuống, đổi sang màu đen */
 .navbar.scrolled .nav-menu .ant-menu-item a {
-    color: black;
+    color: black !important;
+    /* Chữ đen khi cuộn */
 }
 
 .nav-menu .ant-menu-item:hover {
-    color: black !important;
-    /* Màu xanh nhạt khi hover */
+    color: #0077cc !important;
+    /* Màu xanh khi hover */
 }
 
+/* Nút menu trên điện thoại */
 .menu-btn {
     display: none;
 }
 
-/* Hiển thị menu button trên điện thoại */
 @media (max-width: 768px) {
     .nav-menu {
         display: none;
@@ -77,10 +82,10 @@
 
     .menu-btn {
         display: block;
-        color: #fff;
+        color: white !important;
     }
 
     .navbar.scrolled .menu-btn {
-        color: #0277bd;
+        color: black !important;
     }
 }
