@@ -1,0 +1,21 @@
+.map-container .ant-col {
+    padding: 10px;
+    /* Thêm padding cho cột chứa bản đồ */
+}
+
+.map-container .leaflet-container {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Thêm shadow để tạo hiệu ứng đẹp */
+}
+
+.map-custom {
+    width: 100%;
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 60px 20px;
+    /* Padding trên và dưới */
+    text-align: center;
+
+}

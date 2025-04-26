@@ -10,9 +10,10 @@ export default function Navbar() {
 
     const [isScrolled, setIsScrolled] = useState(!isHomePage);
     const [visible, setVisible] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
     useEffect(() => {
-        // Reset trạng thái navbar và cuộn về đầu trang khi chuyển trang
+        // Scroll logic
         setIsScrolled(!isHomePage);
         window.scrollTo({ top: 0, behavior: "smooth" });
 
@@ -26,6 +27,15 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, [location.pathname]);
 
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     const showDrawer = () => setVisible(true);
     const closeDrawer = () => setVisible(false);
 
@@ -35,36 +45,40 @@ export default function Navbar() {
                 <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>SpaLogo</Link>
             </div>
 
-            <Menu mode="horizontal" className="nav-menu">
-                <Menu.Item key="home">
-                    <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Trang chủ</Link>
-                </Menu.Item>
-                <Menu.Item key="services">
-                    <Link to="/services" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Dịch vụ</Link>
-                </Menu.Item>
-                <Menu.Item key="about">
-                    <Link to="/about" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Giới thiệu</Link>
-                </Menu.Item>
-                <Menu.Item key="contact">
-                    <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Liên hệ</Link>
-                </Menu.Item>
-            </Menu>
+            {!isMobile && (
+                <Menu mode="horizontal" className="nav-menu">
+                    <Menu.Item key="home">
+                        <Link to="/">Trang chủ</Link>
+                    </Menu.Item>
+                    <Menu.Item key="services">
+                        <Link to="/services">Dịch vụ</Link>
+                    </Menu.Item>
+                    <Menu.Item key="about">
+                        <Link to="/about">Giới thiệu</Link>
+                    </Menu.Item>
+                    <Menu.Item key="contact">
+                        <Link to="/contact">Liên hệ</Link>
+                    </Menu.Item>
+                </Menu>
+            )}
 
-            <Button className="menu-btn" type="text" icon={<MenuOutlined />} onClick={showDrawer} />
+            {isMobile && (
+                <Button className="menu-btn" type="text" icon={<MenuOutlined />} onClick={showDrawer} />
+            )}
 
             <Drawer placement="right" onClose={closeDrawer} open={visible}>
                 <Menu mode="vertical" onClick={closeDrawer}>
                     <Menu.Item key="home">
-                        <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Trang chủ</Link>
+                        <Link to="/">Trang chủ</Link>
                     </Menu.Item>
                     <Menu.Item key="services">
-                        <Link to="/services" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Dịch vụ</Link>
+                        <Link to="/services">Dịch vụ</Link>
                     </Menu.Item>
                     <Menu.Item key="about">
-                        <Link to="/about" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Giới thiệu</Link>
+                        <Link to="/about">Giới thiệu</Link>
                     </Menu.Item>
                     <Menu.Item key="contact">
-                        <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Liên hệ</Link>
+                        <Link to="/contact">Liên hệ</Link>
                     </Menu.Item>
                 </Menu>
             </Drawer>

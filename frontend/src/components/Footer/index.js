@@ -3,11 +3,13 @@ import { Layout, Row, Col, Space, Button } from 'antd';
 import { FacebookFilled, YoutubeFilled, HomeOutlined, MailOutlined, PhoneOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import "../../css/Footer.css";
+import { Container } from 'react-bootstrap';
 
 const { Footer } = Layout;
 
 export default function FooterTest() {
     return (
+
         <Footer style={{ background: '#f8f9fa', padding: '20px 0', textAlign: 'center', width: '100vw' }}>
             <div style={{ width: '100%', maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
                 {/* Mạng xã hội */}

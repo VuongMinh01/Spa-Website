@@ -17,7 +17,7 @@ export default function HomeAboutUs() {
                         Đội ngũ chuyên gia tận tâm luôn mang đến trải nghiệm tốt nhất cho bạn.
                     </p>
                     <Button type="primary">
-                        <Link to="/about-us">Xem thêm</Link>
+                        <Link to="/about">Xem thêm</Link>
                     </Button>
                 </Col>
 
