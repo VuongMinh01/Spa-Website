@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Footer from '../../components/Footer';
-import Home from '../../components/HomeComponents/Home';
-import HomeAboutUs from '../../components/HomeComponents/HomeAboutUs';
+import ServicesInform from '../../components/ServiceComponents/ServicesInform';
+import ServiceBanner from '../../components/ServiceComponents/ServiceBanner';
 
 export default function ServicePage() {
     useEffect(() => {
@@ -11,27 +11,8 @@ export default function ServicePage() {
 
     return (
         <div>
-            <h1>fsdfsfsdf</h1>
-            <h1>fsdfsfsdf</h1>
-            <h1>fsdfsfsdf</h1>
-            <h1>fsdfsfsdf</h1>
-            <h1>fsdfsfsdf</h1>
-            <h1>fsdfsfsdf</h1>
-            <h1>fsdfsfsdf</h1>
-            <h1>fsdfsfsdf</h1>
-            <h1>fsdfsfsdf</h1>
-            <h1>fsdfsfsdf</h1>
-            <h1>fsdfsfsdf</h1>
-            <h1>fsdfsfsdf</h1>
-            <h1>fsdfsfsdf</h1>
-            <h1>fsdfsfsdf</h1>
-            <h1>fsdfsfsdf</h1>
-            <h1>fsdfsfsdf</h1>
-            <h1>fsdfsfsdf</h1>
-            <h1>fsdfsfsdf</h1>
-            <h1>fsdfsfsdf</h1>
-            <h1>fsdfsfsdf</h1>
-
+            <ServiceBanner />
+            <ServicesInform />
             <Footer />
         </div>
     );
