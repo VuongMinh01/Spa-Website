@@ -83,8 +83,8 @@ export default function ServicesInform() {
                 boxSizing: 'border-box'
             }}
         >
-            <Layout style={{ minHeight: '70vh', background: '#fff', borderRadius: '8px', overflow: 'hidden' }}>
-                <Layout style={{ border: '0.5px solid #b8860b' }} >
+            <Layout style={{ minHeight: '70vh', background: '#fff', borderRadius: '5px', overflow: 'hidden' }}>
+                <Layout style={{ border: '2px solid #b8860b' }} >
                     {/* Header bảng giả */}
                     <Row
                         style={{

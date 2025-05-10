@@ -5,7 +5,7 @@ import ServiceBanner from '../../components/ServiceComponents/ServiceBanner';
 
 export default function ServicePage() {
     useEffect(() => {
-        document.title = 'Spa';
+        document.title = 'Spa Service';
         console.log("🏠 ServicePage is rendered!");
     }, []);
 

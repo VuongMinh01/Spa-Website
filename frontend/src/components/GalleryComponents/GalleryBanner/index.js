@@ -3,7 +3,7 @@ import { Breadcrumb, Typography } from 'antd';
 import { Link } from 'react-router-dom';
 const { Title } = Typography;
 
-export default function ServiceBanner() {
+export default function GalleryBanner() {
     return (
         <div
             style={{
@@ -38,12 +38,11 @@ export default function ServiceBanner() {
                         <Link to="/" style={{ color: '#fff' }}>HOME</Link>
                     </Breadcrumb.Item>
                     <Breadcrumb.Item>
-                        <span style={{ color: '#fff' }}>OUR SERVICES</span>
+                        <span style={{ color: '#fff' }}>GALLERY</span>
                     </Breadcrumb.Item>
                 </Breadcrumb>
                 <Title level={2} style={{ color: '#fff', fontSize: '36px', marginBottom: 0 }}>
-                    OUR SERVICES
-                </Title>
+                    GALLERY                </Title>
                 <div
                     style={{
                         width: 80,

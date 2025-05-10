@@ -53,6 +53,9 @@ export default function Navbar() {
                     <Menu.Item key="services">
                         <Link to="/services">Dịch vụ</Link>
                     </Menu.Item>
+                    <Menu.Item key="gallery">
+                        <Link to="/gallery">Gallery</Link>
+                    </Menu.Item>
                     <Menu.Item key="about">
                         <Link to="/about">Giới thiệu</Link>
                     </Menu.Item>

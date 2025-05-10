@@ -12,11 +12,6 @@ export default function Home() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
-        document.title = 'Spa';
-        console.log("🏠 HomePage is rendered!");
-    }, []);
-
-    useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
         }, 10000); // Tự động chuyển ảnh sau 4s

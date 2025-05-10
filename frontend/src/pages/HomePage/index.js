@@ -6,7 +6,7 @@ import MyMap from '../../components/MyMap';
 import HomeService from '../../components/HomeComponents/HomeService';
 export default function HomePage() {
     useEffect(() => {
-        document.title = 'Spa';
+        document.title = 'Spa Vương';
         console.log("🏠 HomePage is rendered!");
     }, []);
 
